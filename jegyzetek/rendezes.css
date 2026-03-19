@@ -7,11 +7,10 @@ main {
     grid-template-columns: 1fr 6fr;
 
     
-    gap: 10px;
 }
 
 nav {
-    border: solid gray;
+    border: solid red;
     
 }
 
@@ -23,6 +22,6 @@ article {
 }
 
 header {
-    border: solid gray;
-   
+    border: solid hotpink;
+    
 }

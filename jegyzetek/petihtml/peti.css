@@ -1,0 +1,44 @@
+.kartyak {
+    border: solid grey;
+
+
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5px;
+}
+
+.nevjegy {
+    display: grid;
+    grid-template-columns: 4fr 6fr;
+    border: solid gray;
+    gap: 20px;
+}
+
+.kep {
+   border: solid gray; 
+   padding: 20px;
+   margin: 20px;
+}
+
+.szoveg {
+    border: solid gray;
+    
+}
+.uzenet1{
+    padding: 20px;
+    margin: 20px;
+}
+.uzenet2{
+    padding: 20px;
+    margin: 20px;
+}
+
+
+
+img{
+    max-width: 200px;
+    max-height: 300px;
+}
