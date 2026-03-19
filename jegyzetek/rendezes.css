@@ -3,6 +3,7 @@ main {
     grid-template-columns: 1fr 6fr;
     border: solid greenyellow;
     border-style: dotted;
+    gap: 10px;
 }
 
 nav {
@@ -13,11 +14,8 @@ nav {
 article {
     border: solid blue;
     border-style: dotted;
-}
-
-.container {
-    border: solid salmon;
-    border-style: dotted;
+    display: grid;
+    gap: 20px;
 }
 
 header {
