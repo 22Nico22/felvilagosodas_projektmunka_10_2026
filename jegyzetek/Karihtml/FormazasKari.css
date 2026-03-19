@@ -1,26 +1,28 @@
-main {
-    display: grid;
-    grid-template-columns: 1fr 6fr;
-    border: solid greenyellow;
-    border-style: dotted;
-}
+.kartyak {
+    border: solid grey;
 
-nav {
-    border: solid red;
-    border-style: dotted;
-}
 
-article {
-    border: solid blue;
-    border-style: dotted;
 }
 
 .container {
-    border: solid salmon;
-    border-style: dotted;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5px;
 }
 
-header {
-    border: solid hotpink;
-    border-style: dotted;
+.nevjegy {
+    display: grid;
+    grid-template-columns: 4fr 6fr;
+    border: solid gray;
+    gap: 20px;
+}
+
+.kep {
+    border: solid rgb(133, 105, 255);
+    
+}
+
+.szoveg {
+    border: solid rgb(105, 255, 230);
+    
 }
