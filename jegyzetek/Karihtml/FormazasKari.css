@@ -1,0 +1,26 @@
+main {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    border: solid greenyellow;
+    border-style: dotted;
+}
+
+nav {
+    border: solid red;
+    border-style: dotted;
+}
+
+article {
+    border: solid blue;
+    border-style: dotted;
+}
+
+.container {
+    border: solid salmon;
+    border-style: dotted;
+}
+
+header {
+    border: solid hotpink;
+    border-style: dotted;
+}
