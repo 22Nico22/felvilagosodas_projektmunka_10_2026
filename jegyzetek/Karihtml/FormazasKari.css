@@ -1,6 +1,6 @@
 .kartyak {
-    border: solid hotpink;
-    border-style: dotted;
+    border: solid grey;
+
 
 }
 
@@ -13,17 +13,16 @@
 .nevjegy {
     display: grid;
     grid-template-columns: 4fr 6fr;
-    border: solid rgb(153, 126, 4);
-    border-style: dotted;
+    border: solid gray;
     gap: 20px;
 }
 
 .kep {
     border: solid rgb(133, 105, 255);
-    border-style: dotted;
+    
 }
 
 .szoveg {
     border: solid rgb(105, 255, 230);
-    border-style: dotted;
+    
 }

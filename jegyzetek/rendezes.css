@@ -1,24 +1,28 @@
+body {
+   
+}
+
 main {
     display: grid;
     grid-template-columns: 1fr 6fr;
-    border: solid greenyellow;
-    border-style: dotted;
+    border: solid gray;
+    
     gap: 10px;
 }
 
 nav {
-    border: solid red;
-    border-style: dotted;
+    border: solid gray;
+    
 }
 
 article {
-    border: solid blue;
-    border-style: dotted;
+    border: solid gray;
+   
     display: grid;
     gap: 20px;
 }
 
 header {
-    border: solid hotpink;
-    border-style: dotted;
+    border: solid gray;
+   
 }
