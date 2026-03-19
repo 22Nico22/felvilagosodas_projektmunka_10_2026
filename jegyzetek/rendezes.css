@@ -1,0 +1,26 @@
+main {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    border: solid greenyellow;
+    
+}
+
+nav {
+    border: solid red;
+    
+}
+
+article {
+    border: solid blue;
+    
+}
+
+.container {
+    border: solid salmon;
+    
+}
+
+header {
+    border: solid hotpink;
+    
+}
