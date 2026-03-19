@@ -12,17 +12,30 @@
 
 .nevjegy {
     display: grid;
-    grid-template-columns: 4fr 6fr;
+    grid-template-columns: 3fr 6fr;
     border: solid gray;
     gap: 20px;
 }
 
 .kep {
-    border: solid rgb(133, 105, 255);
+    
+    padding: 10px;
+
+    
     
 }
 
+#profil {
+
+    border-radius: 50%;
+}
+
 .szoveg {
-    border: solid rgb(105, 255, 230);
+    
+    padding: 10px;
+}
+
+img {
+    width: 100%;
     
 }

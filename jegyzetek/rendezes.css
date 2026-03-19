@@ -1,11 +1,11 @@
 body {
-   
+   font-family: Cursive;
 }
 
 main {
     display: grid;
     grid-template-columns: 1fr 6fr;
-    border: solid gray;
+
     
     gap: 10px;
 }
@@ -16,7 +16,7 @@ nav {
 }
 
 article {
-    border: solid gray;
+
    
     display: grid;
     gap: 20px;
