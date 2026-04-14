@@ -1,7 +1,10 @@
-.kartyak {
-    border: solid grey;
+* {
+    box-sizing: border-box;
+}
 
 
+.kartyak img{
+    border-radius: 10px;
 }
 
 .container {
@@ -20,7 +23,6 @@
 .kep {
     
     padding: 10px;
-
     
     
 }
@@ -38,4 +40,176 @@
 img {
     width: 100%;
     
+}
+
+li {
+    padding: 10px;
+    
+}
+
+
+
+header {
+    padding: 20px;
+}
+
+ button {
+    min-width: 100px;
+    padding: 10px;
+    border-radius: 10px;
+    
+}
+
+button:hover {
+    background-color: aquamarine;
+}
+
+/* position */
+
+/* position:static | fixed | sticky | relative | absoulute */
+
+nav{
+
+    padding: 20px;
+    min-width: 250px;
+    background-color: white;
+}
+
+.sticky {
+    position:fixed;
+    top: 400px;
+    left: 15px;
+    padding: 10px;
+}
+
+#backTotop {
+    display: grid;
+    grid-template-columns: 1fr;
+    font-size: 75px;
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+    border-radius: 50%;
+    background-color: white;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    
+}
+
+#BTT_Id {
+    color:black;
+
+   
+}
+
+.navigacio{
+    position: relative;
+    width: 200px;
+    height: 50px;
+    background: #173958;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: #fff;
+    text-decoration: none;
+    padding: 0 23px;
+    margin-bottom: 10px;
+}
+
+ .navigacio::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(45deg, #4871bd, #97bbe9);
+    opacity: 0;
+    transition: .5s;
+    z-index: 0;
+
+
+}
+
+ .navigacio:hover::before {
+    opacity: 1;
+}
+
+nav * {
+    position: relative;
+    z-index: 1;
+    
+}
+
+nav  {
+    display: inline-block;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+#home {
+    padding: 10px;
+    width: auto;
+}
+
+@media screen and (max-width:800px) {
+    body {}
+    header {grid-area: h}
+    article {grid-area: ar;}
+    #SzovegesTartalom{grid-area: Sz;}
+    #kepTartalom{grid-area: Kep;}
+    footer {grid-area: f;}
+    main {
+        grid-template-columns: 1fr;
+        grid-template-areas:"h"
+        "ar"
+        "f" ;
+    }
+    .nevjegy {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .nevjegy img {
+        width: 50%;
+    }
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .sticky {
+        position:relative;
+        top: 0;
+        left: 0;
+        padding: 0;
+    }
+    .navigacio{
+        width: auto;
+}
+}
+
+@media screen and (max-width:400px) {
+    body {}
+    header {grid-area: h}
+    article {grid-area: ar;}
+    #SzovegesTartalom{grid-area: Sz;}
+    #kepTartalom{grid-area: Kep;}
+    footer {grid-area: f;}
+    main {
+        grid-template-columns: 1fr;
+        grid-template-areas:"h"
+        "ar"
+        "f" ;
+    }
+    .nevjegy {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .nevjegy img {
+        width: 50%;
+    }
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
 }

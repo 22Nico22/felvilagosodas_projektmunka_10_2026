@@ -1,27 +1,27 @@
 body {
    font-family: Cursive;
+  
 }
 
 main {
     display: grid;
     grid-template-columns: 1fr 6fr;
-
+    gap: 10px;
     
 }
 
 nav {
-    border: solid red;
-    
+    border: solid black;
+    border-radius: 10px;
 }
 
 article {
 
-   
+    border-radius: 10px;
     display: grid;
     gap: 20px;
 }
 
 header {
-    border: solid hotpink;
-    
+    border: solid gray;
 }
