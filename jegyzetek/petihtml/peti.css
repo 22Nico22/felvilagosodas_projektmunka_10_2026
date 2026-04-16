@@ -1,44 +1,151 @@
-.kartyak {
-    border: solid grey;
+* {
+    box-sizing: border-box;
+}
 
 
+.kartyak img{
+    border-radius: 10px;
 }
 
 .container {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 5px;
+    grid-template-columns: 1fr; 
+    
+}
+header {
+    padding: 20px;
+}
+.uzenet1{
+    
+    padding: 15px;
+    padding-left: 25px;
+
+}
+.valasz1{
+    
+    padding: 15px;
+    padding-left: 100px;
+    
 }
 
 .nevjegy {
     display: grid;
-    grid-template-columns: 4fr 6fr;
-    border: solid gray;
+    grid-template-columns: 3fr 6fr;
     gap: 20px;
+
 }
 
 .kep {
-   border: solid gray; 
-   padding: 20px;
-   margin: 20px;
+    
+    padding: 10px;
+    
+    
+}
+
+#profil {
+ max-width: 100%;
+ max-height: 100%;
 }
 
 .szoveg {
-    border: solid gray;
+    
+    padding: 10px;
+}
+h4 {
+    
+    color: lightskyblue;
+}
+img {
+    width: 100%;
     
 }
-.uzenet1{
-    padding: 20px;
-    margin: 20px;
+
+li {
+    padding: 10px;
+    
 }
-.uzenet2{
-    padding: 20px;
-    margin: 20px;
+.uzenet{
+    text-align: center;
 }
 
 
+header {
+    padding: 20px;
+}
+@media screen and (max-width:800px) {
+    body {}
+    header {grid-area: h}
+    article {grid-area: ar;}
+    footer {grid-area: f;}
+    main {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "h"
+        "n"
+        "ar"
+        "f" ;
+    }
+    .nevjegy {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-area: nev;
+    }
 
-img{
-    max-width: 200px;
-    max-height: 300px;
+    .nevjegy img {
+        width: 50%;
+    }
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-area: con;
+
+    }
+        article {
+        grid-template-areas:
+        "h"
+        "nev"
+        "con"
+    }
+    .sticky {
+        position:relative;
+        top: 0;
+        left: 0;
+        padding: 0;
+    }
+    .navigacio{
+        width: auto;
+}
+}
+
+@media screen and (max-width:400px) {
+    body {}
+    header {grid-area: h}
+    article {grid-area: ar;}
+    footer {grid-area: f;}
+    main {
+        grid-template-columns: 1fr;
+         grid-template-areas:
+        "n"
+        "ar"
+        "f" ;
+    }
+     article {
+        grid-template-areas:
+        "h"
+        "nev"
+        "con"
+     }
+    .nevjegy {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .nevjegy img {
+        width: 100%;
+        
+    }
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
 }
