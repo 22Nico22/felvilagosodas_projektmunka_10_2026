@@ -6,22 +6,108 @@ body {
 main {
     display: grid;
     grid-template-columns: 1fr 6fr;
-    gap: 10px;
     
 }
 
 nav {
-    border: solid black;
-    border-radius: 10px;
+    border: solid #173958;
+    border-radius: 5px;
 }
 
 article {
 
     border-radius: 10px;
     display: grid;
-    gap: 20px;
 }
 
 header {
-    border: solid gray;
+    padding: 10px;
+}
+
+/* position */
+
+/* position:static | fixed | sticky | relative | absoulute */
+
+nav{
+
+    padding: 20px;
+    min-width: 250px;
+    background-color: white;
+}
+
+.sticky {
+    position:fixed;
+    top: 400px;
+    left: 15px;
+    padding: 10px;
+}
+
+#backTotop {
+    display: grid;
+    grid-template-columns: 1fr;
+    font-size: 75px;
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+    border-radius: 50%;
+    background-color: white;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    
+}
+
+#BTT_Id {
+    color:rgb(0, 0, 0);
+
+   
+}
+
+.navigacio{
+    position: relative;
+    width: 200px;
+    height: 50px;
+    background: #173958;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: #fff;
+    text-decoration: none;
+    padding: 0 23px;
+    margin-bottom: 10px;
+}
+
+ .navigacio::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(45deg, #4871bd, #97bbe9);
+    opacity: 0;
+    transition: .5s;
+    z-index: 0;
+
+
+}
+
+ .navigacio:hover::before {
+    opacity: 1;
+}
+
+nav * {
+    position: relative;
+    z-index: 1;
+    
+}
+
+nav  {
+    display: inline-block;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+#home {
+    padding: 10px;
+    width: auto;
 }
