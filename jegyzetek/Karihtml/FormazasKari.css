@@ -12,9 +12,6 @@
     grid-template-columns: 1fr 1fr 1fr;
     gap: 5px;
     padding: 10px;
-    border: solid gray;
-    border-left: none;
-    border-top: none;
     margin-left: 10px;
 }
 
@@ -26,10 +23,11 @@
 }
 
 .kep {
-    
     padding: 10px;
-    
-    
+}
+footer {
+    text-align: center;
+    color: #173958;
 }
 
 #profil {
