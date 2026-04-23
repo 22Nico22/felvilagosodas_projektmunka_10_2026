@@ -94,10 +94,12 @@ body {
     top: 0;
     z-index: 100;
     background-color: #173958;
-    padding: 15px;
+    padding: 0px;
     display: grid;
     place-items: center;
     border-bottom: 4px solid #000;
+    margin: 10px;
+    border-radius: 10px;
 }
 
 .home-link {
@@ -105,6 +107,14 @@ body {
     text-decoration: none;
     font-weight: bold;
     font-size: 18px;
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    place-items: center;
+}
+
+.home-link:hover {
+    background-color: #235482;
 }
 
 .gorgetheto-tartalom {
@@ -117,31 +127,35 @@ body {
 }
 
 .poszt-blokk {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     border: 3px solid #173958;
     border-radius: 5px;
     overflow: hidden;
+    background-color: #000;
+    height: 500px;
 }
 
 .kep-tarolo {
     background-color: #fff;
     border-right: 3px solid #173958;
-    min-height: 400px;
-    display: grid;
-    place-items: center;
+    flex: 0 0 auto;
+    height: 100%;
 }
 
 .kep-tarolo img {
-    max-width: 100%;
+    height: 100%;
+    width: auto;
     display: block;
+    object-fit: cover;
 }
 
 .szoveg-tarolo {
+    flex: 1;
     background-color: #000;
     padding: 20px;
     display: grid;
     place-items: center;
+    overflow-y: auto;
 }
 
 .szoveg-keret {
@@ -216,15 +230,28 @@ body {
 @media screen and (max-width: 1000px) {
     .fo-racs {
         grid-template-columns: 240px 1fr;
-        grid-template-rows: 1fr auto; 
         height: auto;
     }
 
     .oldalsav-jobb {
-        display: grid; 
-        grid-column: 1 / -1;
+        grid-column: 1; 
+        grid-row: 2;
         border-left: none;
         border-top: 3px solid #173958;
+        padding: 20px;
+        background-color: white;
+    }
+
+    .oldalsav-bal {
+        grid-column: 1;
+        grid-row: 1;
+        border-right: 3px solid #173958;
+    }
+
+    .kozepso-tartalom {
+        grid-column: 2;
+        grid-row: 1 / span 2; 
+        height: 100vh;
     }
 
     .poszt-blokk {
@@ -237,54 +264,66 @@ body {
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1000px) {
     .fo-racs {
-        grid-template-columns: 1fr;
+        grid-template-columns: 240px 1fr;
         grid-template-rows: auto 1fr;
-        height: auto;
+        height: 100vh;
     }
 
     .oldalsav-bal {
-        border-right: none;
-        border-bottom: 3px solid #173958;
+        grid-column: 1;
+        grid-row: 1;
+        border-right: 3px solid #173958;
+    }
+
+    .oldalsav-jobb {
+        grid-column: 1;
+        grid-row: 2;
+        border-left: none;
+        border-right: 3px solid #173958;
+        background-color: white;
+        padding: 15px;
+
+        height: 320px;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .oldalsav-jobb::-webkit-scrollbar:horizontal {
+        display: none;
+    }
+
+    .ismeros-lista {
+        display: grid;
+        grid-template-columns: 1fr;
         width: 100%;
-        height: auto;
-        position: relative;
-        padding: 10px;
+        gap: 10px;
     }
 
-    .sticky-nav-kontener {
+    .ismeros-sor {
         display: grid;
-        grid-template-columns: 60px 1fr; 
-        align-items: center;
-        gap: 15px;
-    }
-
-    .profil-kep-helye {
-        width: 60px;
-        margin-bottom: 0;
-    }
-
-    .gomb-csoport {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr); 
-        gap: 5px;
-    }
-
-    .nav-gomb {
-        padding: 8px 5px;
-        font-size: 11px;
+        grid-template-columns: 45px 1fr;
+        width: 100%;
+        gap: 10px;
+        overflow: hidden;
     }
 
     .kozepso-tartalom {
-        height: auto;
+        grid-column: 2;
+        grid-row: 1 / span 2;
+        height: 100vh;
     }
-    
-    .gorgetheto-tartalom {
-        overflow-y: visible;
+
+    .poszt-blokk {
+        grid-template-columns: 1fr;
+    }
+
+    .kep-tarolo {
+        border-right: none;
+        border-bottom: 3px solid #173958;
     }
 }
-
 
 
 /*
