@@ -127,7 +127,8 @@ body {
 }
 
 .poszt-blokk {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr;
     border: 3px solid #173958;
     border-radius: 5px;
     overflow: hidden;
@@ -138,25 +139,31 @@ body {
 .kep-tarolo {
     background-color: #fff;
     border-right: 3px solid #173958;
-    flex: 0 0 auto;
     height: 100%;
+    overflow: hidden;
 }
 
 .kep-tarolo img {
+    width: 100%;
     height: 100%;
-    width: auto;
-    display: block;
     object-fit: cover;
+    object-position: center;
 }
 
+
+
+
+
 .szoveg-tarolo {
-    flex: 1;
     background-color: #000;
     padding: 20px;
     display: grid;
     place-items: center;
     overflow-y: auto;
+    height: 100%;
 }
+
+
 
 .szoveg-keret {
     border: 2px solid white;
@@ -227,92 +234,34 @@ body {
     object-fit: cover;
 }
 
-@media screen and (max-width: 1000px) {
-    .fo-racs {
-        grid-template-columns: 240px 1fr;
-        height: auto;
-    }
+@media screen and (max-width: 1200px) {
 
-    .oldalsav-jobb {
-        grid-column: 1; 
-        grid-row: 2;
-        border-left: none;
-        border-top: 3px solid #173958;
-        padding: 20px;
-        background-color: white;
+    .fo-racs {
+        grid-template-columns: 220px minmax(0, 1fr);
+        grid-template-rows: auto auto;
     }
 
     .oldalsav-bal {
         grid-column: 1;
         grid-row: 1;
-        border-right: 3px solid #173958;
-    }
-
-    .kozepso-tartalom {
-        grid-column: 2;
-        grid-row: 1 / span 2; 
-        height: 100vh;
-    }
-
-    .poszt-blokk {
-        grid-template-columns: 1fr;
-    }
-
-    .kep-tarolo {
-        border-right: none;
-        border-bottom: 3px solid #173958;
-    }
-}
-
-@media screen and (max-width: 1000px) {
-    .fo-racs {
-        grid-template-columns: 240px 1fr;
-        grid-template-rows: auto 1fr;
-        height: 100vh;
-    }
-
-    .oldalsav-bal {
-        grid-column: 1;
-        grid-row: 1;
-        border-right: 3px solid #173958;
-    }
-
-    .oldalsav-jobb {
-        grid-column: 1;
-        grid-row: 2;
-        border-left: none;
-        border-right: 3px solid #173958;
-        background-color: white;
-        padding: 15px;
-
-        height: 320px;
-        overflow-y: auto;
-        overflow-x: hidden;
-    }
-
-    .oldalsav-jobb::-webkit-scrollbar:horizontal {
-        display: none;
-    }
-
-    .ismeros-lista {
-        display: grid;
-        grid-template-columns: 1fr;
-        width: 100%;
-        gap: 10px;
-    }
-
-    .ismeros-sor {
-        display: grid;
-        grid-template-columns: 45px 1fr;
-        width: 100%;
-        gap: 10px;
-        overflow: hidden;
     }
 
     .kozepso-tartalom {
         grid-column: 2;
         grid-row: 1 / span 2;
-        height: 100vh;
+    }
+
+
+    .oldalsav-jobb {
+        grid-column: 1;
+        grid-row: 2;
+
+        border-left: none;
+        border-right: 3px solid #173958;
+
+        max-height: 350px;
+
+        overflow-y: auto;
     }
 
     .poszt-blokk {
@@ -322,11 +271,113 @@ body {
     .kep-tarolo {
         border-right: none;
         border-bottom: 3px solid #173958;
+
+        height: 350px;
+
+        overflow: hidden;
+    }
+
+
+
+    .kep-tarolo img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .fo-racs {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+    }
+
+
+
+    .oldalsav-bal {
+        grid-column: 1;
+        grid-row: 1;
+
+        border-right: none;
+        border-bottom: 3px solid #173958;
+    }
+
+
+    .kozepso-tartalom {
+        grid-column: 1;
+        grid-row: 2;
+
+        min-height: auto;
+    }
+
+
+
+    .oldalsav-jobb {
+        grid-column: 1;
+        grid-row: 3;
+
+        border-right: none;
+        border-top: 3px solid #173958;
+
+        max-height: none;
+    }
+
+    .gorgetheto-tartalom {
+        padding: 15px;
+        gap: 25px;
+    }
+
+
+
+    .poszt-blokk {
+        min-height: auto;
+    }
+
+    .kep-tarolo {
+        height: 220px;
+    }
+
+    .kep-tarolo img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+        object-position: center;
+    }
+
+
+    .profil-kep-helye {
+        width: 120px;
+
+        margin: auto;
+    }
+
+
+
+    .sticky-nav-kontener {
+        justify-items: center;
+    }
+
+    .gomb-csoport {
+        width: 100%;
+    }
+
+    .nav-gomb {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .szoveg-keret {
+        font-size: 14px;
     }
 }
 
 
-/*
-Csak azert irok ide, hogy irhassak commitot...
-kesz az oldal validatorral megneztem minden fajlt minden link elvileg mukodik kepek stb jol neznek ki elvileg kesz van minden
-/*
+
+
+
+
+
