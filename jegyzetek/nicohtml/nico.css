@@ -133,18 +133,19 @@ img {
 
 .poszt-blokk {
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: minmax(220px, 420px) 1fr;
     border: 3px solid #173958;
     border-radius: 5px;
     overflow: hidden;
     background-color: #000;
-    min-height: 500px;
+    min-height: 450px;
 }
 
 .kep-tarolo {
     background-color: #fff;
     border-right: 3px solid #173958;
     overflow: hidden;
+    min-height: 0;
 }
 
 .kep-tarolo img {
@@ -236,11 +237,21 @@ img {
     object-fit: cover;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1200px) {
 
     .fo-racs {
         grid-template-columns: 240px 1fr;
         min-height: 100vh;
+    }
+
+    .oldalsav-bal {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .kozepso-tartalom {
+        grid-column: 2;
+        grid-row: 1 / span 2;
     }
 
     .oldalsav-jobb {
@@ -254,26 +265,16 @@ img {
         background-color: white;
     }
 
-    .oldalsav-bal {
-        grid-column: 1;
-        grid-row: 1;
-    }
-
-    .kozepso-tartalom {
-        grid-column: 2;
-        grid-row: 1 / span 2;
-
-        min-height: 100vh;
-    }
-
     .poszt-blokk {
         grid-template-columns: 1fr;
+        min-height: auto;
     }
 
     .kep-tarolo {
         border-right: none;
         border-bottom: 3px solid #173958;
-        height: 350px;
+        aspect-ratio: 16 / 9;
+        height: auto;
     }
 }
 
@@ -305,7 +306,6 @@ img {
 
         border-right: none;
         border-top: 3px solid #173958;
-
         max-height: none;
     }
 
@@ -317,11 +317,11 @@ img {
 
     .poszt-blokk {
         grid-template-columns: 1fr;
-        min-height: auto;
     }
 
     .kep-tarolo {
-        height: 220px;
+        aspect-ratio: 16 / 9;
+        height: auto;
     }
 
     .profil-kep-helye {
